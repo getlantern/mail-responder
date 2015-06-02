@@ -15,6 +15,6 @@ https://s3.amazonaws.com/firetweet/firetweet-manoto.apk
 
 - تیم FireTwee"]
         ],
-    "attachments": [["FireTweet", "firetweet-manoto.apk", "firetweet-manoto.ap_"]],
+    "attachments": [["firetweet", "firetweet-manoto.apk", "firetweet-manoto.ap_"]],
     "send_method": "SMTP"
   },
