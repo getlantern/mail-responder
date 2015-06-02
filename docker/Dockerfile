@@ -30,5 +30,10 @@ RUN wget -O postfix-logwatch-1.40.03.tgz "http://downloads.sourceforge.net/proje
 RUN tar -xvf postfix-logwatch-1.40.03.tgz
 RUN (cd postfix-logwatch-1.40.03 && make install-logwatch)
 
+COPY boto.cfg /etc/boto.cfg
 COPY settings.py psiphon-circumvention-system/EmailResponder/settings.py
+RUN service mysql start && mysql -uroot -e "CREATE USER 'manato'@'localhost' IDENTIFIED BY 'manato'; CREATE DATABASE manato; GRANT ALL ON manato.* TO 'manato'@'localhost';"
 RUN (cd psiphon-circumvention-system/EmailResponder && sh ./install.sh)
+
+RUN touch /var/log/mail_responder.log
+#ENTRYPOINT ["tail", "-f", "/var/log/mail_responder.log"]

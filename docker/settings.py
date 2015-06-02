@@ -40,8 +40,8 @@ DB_ROOT_PASSWORD = ''
 MAIL_RESPONDER_USERNAME = 'mail_responder'
 
 # The location of the responder config in S3.
-CONFIG_S3_BUCKET = 'getlantern'
-CONFIG_S3_KEY = 'EmailResponder/conf.json'
+CONFIG_S3_BUCKET = 'mail-responder'
+CONFIG_S3_KEY = 'conf.json'
 
 # The directory where attachment files are cached.
 ATTACHMENT_CACHE_DIR = os.path.expanduser('~%s/attach_cache' % MAIL_RESPONDER_USERNAME)
