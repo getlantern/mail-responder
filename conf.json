@@ -1,0 +1,20 @@
+[
+  {
+    "email_addr": "manato@firetweet.io",
+    "body":
+        [
+          ["plain", "English - https://example.com/en.html\n\u0641\u0627\u0631\u0633\u06cc - https://example.com/fa.html"],
+          ["html", "
+
+از شما برای ارتباط با تیم FireTweet ممنونیم. شما می‌توانید اپلیکیشن توییتر FireTweet را از یکی از آدرس‌های زیر برای دستگاه‌های اندرویدی دانلود و نصب کنید:
+
+https://github.com/firetweet/downloads/blob/master/firetweet-manoto.apk?raw=true
+https://s3.amazonaws.com/firetweet/firetweet-manoto.apk
+
+اگر مشکل یا سوالی داشتید اون را با ایمیل Team@GetLantern.org با ما درمیان بگذارید.
+
+- تیم FireTwee"]
+        ],
+    "attachments": [["FireTweet", "firetweet-manoto.apk", "firetweet-manoto.ap_"]],
+    "send_method": "SMTP"
+  },
