@@ -3,20 +3,10 @@
     "email_addr": "manoto@firetweet.io",
     "body":
         [
-          ["plain", "English - https://example.com/en.html\n\u0641\u0627\u0631\u0633\u06cc - https://example.com/fa.html"],
-          ["html", "https://github.com/firetweet/downloads/blob/master/firetweet-manoto.apk?raw=true https://s3.amazonaws.com/firetweet/firetweet-manoto.apk"]
+          ["plain", "Download at https://github.com/firetweet/downloads/blob/master/firetweet-manoto.apk?raw=true or https://s3.amazonaws.com/firetweet/firetweet-manoto.apk"],
+          ["html", "<a href=\"https://github.com/firetweet/downloads/blob/master/firetweet-manoto.apk?raw=true\">GitHub</a><a href=\"https://s3.amazonaws.com/firetweet/firetweet-manoto.apk\">S3</a>"]
         ],
-    "attachments": [["firetweet", "firetweet-manoto.apk", "firetweet-manoto.ap_"]],
-    "send_method": "SMTP"
-  },
-  {
-    "email_addr": "manoto@responder.getlantern.org",
-    "body":
-        [
-          ["plain", "English - https://example.com/en.html\n\u0641\u0627\u0631\u0633\u06cc - https://example.com/fa.html"],
-          ["html", "https://github.com/firetweet/downloads/blob/master/firetweet-manoto.apk?raw=true https://s3.amazonaws.com/firetweet/firetweet-manoto.apk"]
-        ],
-    "attachments": [["firetweet", "firetweet-manoto.apk", "firetweet-manoto.ap_"]],
+    "attachments": [["firetweet", "firetweet-manoto.apk", "firetweet-manoto.apk"]],
     "send_method": "SMTP"
   }
 ]

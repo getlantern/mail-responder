@@ -6,10 +6,8 @@ A Docker image builder and config to deploy an [email auto responder](https://bi
 ```
 export AWS_ACCESS_KEY_ID=<key>
 export AWS_SECRET_ACCESS_KEY=<secret>
-cat docker/boto.cfg.tmpl | envsubst > docker/boto.cfg
-docker build -t mail-responder docker/
-rm docker/boto.cfg
-docker run mail-responder 
+./make.sh
+docker run -dtip 25:25 mail-responder 
 ```
 
 ## To update response mail address and content
