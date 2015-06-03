@@ -1,6 +1,16 @@
 [
   {
-    "email_addr": "manato@firetweet.io",
+    "email_addr": "manoto@firetweet.io",
+    "body":
+        [
+          ["plain", "English - https://example.com/en.html\n\u0641\u0627\u0631\u0633\u06cc - https://example.com/fa.html"],
+          ["html", "https://github.com/firetweet/downloads/blob/master/firetweet-manoto.apk?raw=true https://s3.amazonaws.com/firetweet/firetweet-manoto.apk"]
+        ],
+    "attachments": [["firetweet", "firetweet-manoto.apk", "firetweet-manoto.ap_"]],
+    "send_method": "SMTP"
+  },
+  {
+    "email_addr": "manoto@responder.getlantern.org",
     "body":
         [
           ["plain", "English - https://example.com/en.html\n\u0641\u0627\u0631\u0633\u06cc - https://example.com/fa.html"],
