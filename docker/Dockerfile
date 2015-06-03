@@ -35,7 +35,6 @@ COPY boto.cfg /etc/boto.cfg
 RUN chown mail_responder:mail_responder /etc/boto.cfg
 COPY dkim.key /home/mail_responder/dkim.key
 COPY settings.py psiphon-circumvention-system/EmailResponder/settings.py
-RUN sed -i "s/return sig + raw_email/return raw_email/" psiphon-circumvention-system/EmailResponder/mail_process.py # don't use DKIM for now
 RUN (cd psiphon-circumvention-system/EmailResponder && sh ./install.sh)
 
 COPY rsyslog.conf /etc/rsyslog.conf
