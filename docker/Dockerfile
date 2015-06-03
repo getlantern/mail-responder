@@ -23,10 +23,7 @@ RUN tar -xvf postfix-logwatch-1.40.03.tgz
 RUN (cd postfix-logwatch-1.40.03 && make install-logwatch)
 
 RUN service mysql start && mysql -uroot -e "CREATE USER 'responder'@'localhost' IDENTIFIED BY 'responder'; CREATE DATABASE responder; GRANT ALL ON responder.* TO 'responder'@'localhost';" && sleep 1 && mysqladmin -u root shutdown
-COPY postfix_address_maps /home/mail_responder/
-COPY postfix_responder_domains /home/mail_responder/
-RUN postmap hash:/home/mail_responder/postfix_address_maps
-RUN postmap hash:/home/mail_responder/postfix_responder_domains
+touch /home/mail_responder/postfix_address_maps /home/mail_responder/postfix_responder_domains
 
 COPY main.cf /etc/postfix/main.cf
 RUN sed -i "s/^bounce/#bounce/" /etc/postfix/master.cf
