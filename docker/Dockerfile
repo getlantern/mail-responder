@@ -33,6 +33,7 @@ RUN sed -i "s/^bounce/#bounce/" /etc/postfix/master.cf
 RUN echo 127.0.0.1:2525 inet n - - - - smtpd -o smtpd_tls_security_level=none >> /etc/postfix/master.cf
 COPY boto.cfg /etc/boto.cfg
 RUN chown mail_responder:mail_responder /etc/boto.cfg
+COPY dkim.key /home/mail_responder/dkim.key
 COPY settings.py psiphon-circumvention-system/EmailResponder/settings.py
 RUN sed -i "s/return sig + raw_email/return raw_email/" psiphon-circumvention-system/EmailResponder/mail_process.py # don't use DKIM for now
 RUN (cd psiphon-circumvention-system/EmailResponder && sh ./install.sh)
