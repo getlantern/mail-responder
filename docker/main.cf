@@ -44,7 +44,7 @@ smtpd_use_tls=no
 # though. It's probably best to not reply at all than to reply unencrypted to
 # a sketchy mail provider that might be in-country.
 smtpd_tls_security_level=encrypt
-smtp_tls_security_level=no
+smtp_tls_security_level=none
 #smtp_tls_security_level=verify
 
 # Handy for debugging:
