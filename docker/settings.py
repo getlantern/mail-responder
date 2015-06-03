@@ -26,9 +26,9 @@ import os
 # Database connection stuff
 #
 
-DB_DBNAME = 'manato'
-DB_USERNAME = 'manato'
-DB_PASSWORD = 'manato'
+DB_DBNAME = 'responder'
+DB_USERNAME = 'responder'
+DB_PASSWORD = 'responder'
 
 DB_ROOT_USERNAME = 'root'
 DB_ROOT_PASSWORD = ''
@@ -48,7 +48,7 @@ ATTACHMENT_CACHE_DIR = os.path.expanduser('~%s/attach_cache' % MAIL_RESPONDER_US
 
 # We're going to use a fixed address to reply to all email from.
 # If this becomes a problem in the future, it can be changed.
-RESPONSE_FROM_ADDR = 'FireTweet Responder <manato@firetweet.io>'
+RESPONSE_FROM_ADDR = 'FireTweet Responder <manoto@firetweet.io>'
 
 # This address will be used as the Return-Path of sent messages. This address
 # will typically receive complaints from senders and other mailservers.
@@ -84,8 +84,8 @@ BLACKLISTED_DOMAINS = []
 # The address to which the stats email should be sent.
 STATS_RECIPIENT_ADDRESS = 'firetweet-devel@googlegroups.com'
 # The address from which the stats email should be sent.
-STATS_SENDER_ADDRESS_BARE = 'manato@firetweet.io'
-STATS_SENDER_ADDRESS = 'Manato FireTweet Responder <%s>' % STATS_SENDER_ADDRESS_BARE
+STATS_SENDER_ADDRESS_BARE = 'manoto@firetweet.io'
+STATS_SENDER_ADDRESS = 'Manoto FireTweet Responder <%s>' % STATS_SENDER_ADDRESS_BARE
 
 # The location of our log file
 LOG_FILENAME = '/var/log/mail_responder.log'

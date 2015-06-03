@@ -8,4 +8,5 @@
         ],
     "attachments": [["firetweet", "firetweet-manoto.apk", "firetweet-manoto.ap_"]],
     "send_method": "SMTP"
-  },
+  }
+]
