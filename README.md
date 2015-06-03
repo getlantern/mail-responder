@@ -14,5 +14,5 @@ docker run mail-responder
 
 ## To update response mail address and content
 ```
-s3cmd put setacl --acl-public conf.json s3://mail-responder/conf.json
+s3cmd put setacl --acl-public conf.json s3://mail_responder/conf.json
 ```
