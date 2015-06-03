@@ -103,7 +103,7 @@ smtpd_hard_error_limit = 3
 smtpd_junk_command_limit = 2
 
 # Reduce the message size limit. There's no reason for large messages to be coming in.
-message_size_limit = 8192000
+message_size_limit = 819200000
 
 # Setting this to 0 indicates that "mail delivery should be tried only once"
 # http://www.postfix.org/postconf.5.html#bounce_queue_lifetime

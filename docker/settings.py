@@ -102,7 +102,7 @@ CLOUDWATCH_PROCESSING_TIME_METRIC_NAME = 'processing_time'
 #
 DKIM_DOMAIN = STATS_SENDER_ADDRESS_BARE[STATS_SENDER_ADDRESS_BARE.index('@') + 1:]
 DKIM_SELECTOR = 'all'
-DKIM_PRIVATE_KEY = './dkim.key'
+DKIM_PRIVATE_KEY = '/home/mail_responder/dkim.key'
 
 
 #
