@@ -133,5 +133,5 @@ smtpd_helo_required = yes
 # We rely on an external command (cron job) to reload the postfix config when
 # this file changes.
 # NOTE: the user home path here might differ with your particular setup.
-virtual_alias_domains = /home/mail_responder/postfix_responder_domains
-virtual_alias_maps = /home/mail_responder/postfix_address_maps
+virtual_alias_domains = static:/home/mail_responder/postfix_responder_domains
+virtual_alias_maps = static:/home/mail_responder/postfix_address_maps
