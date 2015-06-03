@@ -48,7 +48,7 @@ ATTACHMENT_CACHE_DIR = os.path.expanduser('~%s/attach_cache' % MAIL_RESPONDER_US
 
 # We're going to use a fixed address to reply to all email from.
 # If this becomes a problem in the future, it can be changed.
-RESPONSE_FROM_ADDR = 'FireTweet Responder <manoto@firetweet.io>'
+RESPONSE_FROM_ADDR = 'Lantern Auto Responder <responder@getlantern.org>'
 
 # This address will be used as the Return-Path of sent messages. This address
 # will typically receive complaints from senders and other mailservers.
