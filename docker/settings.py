@@ -52,7 +52,7 @@ RESPONSE_FROM_ADDR = 'FireTweet Responder <manoto@firetweet.io>'
 
 # This address will be used as the Return-Path of sent messages. This address
 # will typically receive complaints from senders and other mailservers.
-COMPLAINTS_ADDRESS = 'team@getlantern.org'
+COMPLAINTS_ADDRESS = 'team@responder.getlantern.org'
 
 # These addresses will receive forwarded complaints emails and other administriva.
 # Set to empty array if no such emails should be sent.
