@@ -70,7 +70,7 @@ BLACKLIST_DAILY_LIMIT = 3
 
 # Email addresses from domains in this list will never be blacklisted.
 # Leave empty if functionality is not desired.
-BLACKLIST_EXEMPTION_DOMAINS = []
+BLACKLIST_EXEMPTION_DOMAINS = ['getlantern.org']
 
 # Email addresses from domains in this list will always be blacklisted.
 # Leave empty if functionality is not desired.
@@ -91,7 +91,7 @@ STATS_SENDER_ADDRESS = 'Manoto FireTweet Responder <%s>' % STATS_SENDER_ADDRESS_
 LOG_FILENAME = '/var/log/mail_responder.log'
 
 # TODO: Use aws_helpers._get_autoscaling_group() instead of this hardcoded value
-CLOUDWATCH_DIMENSIONS = { 'AutoScalingGroupName': 'mailresponder-autoscaling-group-1' }
+CLOUDWATCH_DIMENSIONS = {'AutoScalingGroupName': 'mailresponder-autoscaling-group-1'}
 CLOUDWATCH_NAMESPACE = 'FireTweet/MailResponder'
 CLOUDWATCH_TOTAL_SENT_METRIC_NAME = 'response_sent'
 CLOUDWATCH_PROCESSING_TIME_METRIC_NAME = 'processing_time'

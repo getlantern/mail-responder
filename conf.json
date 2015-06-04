@@ -3,8 +3,8 @@
     "email_addr": "manoto@firetweet.io",
     "body":
         [
-          ["plain", "Download at https://github.com/firetweet/downloads/blob/master/firetweet-manoto.apk?raw=true or https://s3.amazonaws.com/firetweet/firetweet-manoto.apk"],
-          ["html", "<p dir=\"rtl\">بیننده گرامی من‌وتو۱، سلام!</p><p dir=\"rtl\">از شما برای ارتباط با تیم FireTweet ممنونیم. شما می‌توانید اپلیکیشن توییتر FireTweet را از یکی از آدرس‌های زیر برای دستگاه‌های اندرویدی دانلود و نصب </p><p dir=\"rtl\">کنید:</p><p dir=\"rtl\"><a href=\"https://github.com/firetweet/downloads/blob/master/firetweet-manoto.apk?raw=true\">GitHub</a></p><p dir=\"rtl\"><a href=\"https://s3.amazonaws.com/firetweet/firetweet-manoto.apk\">S3</a></p><p dir=\"rtl\">اگر مشکل یا سوالی داشتید اون را با ایمیل Team@GetLantern.org با ما درمیان بگذارید.</p><p dir=\"rtl\">- تیم FireTweet</p>"]
+          ["plain", "بیننده گرامی من‌وتو۱، سلام!\n از شما برای ارتباط با تیم FireTweet ممنونیم. شما می‌توانید اپلیکیشن توییتر FireTweet را از یکی از آدرس‌های زیر برای دستگاه‌های اندرویدی دانلود و نصب کنید:\nhttps://github.com/firetweet/downloads/blob/master/firetweet-manoto.apk?raw=true\nhttps://s3.amazonaws.com/firetweet/firetweet-manoto.apk\nاگر مشکل یا سوالی داشتید اون را با ایمیل Team@GetLantern.org با ما درمیان بگذارید.\n - تیم FireTweet"],
+          ["html", "<div dir=\"rtl\"><p dir=\"rtl\">بیننده گرامی من‌وتو۱، سلام!</p><p dir=\"rtl\">از شما برای ارتباط با تیم FireTweet ممنونیم. شما می‌توانید اپلیکیشن توییتر FireTweet را از یکی از آدرس‌های زیر برای دستگاه‌های اندرویدی دانلود و نصب کنید:</p><p dir=\"rtl\"><a href=\"https://github.com/firetweet/downloads/blob/master/firetweet-manoto.apk?raw=true\">https://github.com/firetweet/downloads/blob/master/firetweet-manoto.apk?raw=true</a></p><p dir=\"rtl\"><a href=\"https://s3.amazonaws.com/firetweet/firetweet-manoto.apk\">https://s3.amazonaws.com/firetweet/firetweet-manoto.apk</a></p><p dir=\"rtl\">اگر مشکل یا سوالی داشتید اون را با ایمیل Team@GetLantern.org با ما درمیان بگذارید.</p><p dir=\"rtl\">- تیم FireTweet</p></div>"]
         ],
     "attachments": [["firetweet", "firetweet-manoto.apk", "firetweet-manoto.apk"]],
     "send_method": "SMTP"
@@ -13,8 +13,8 @@
     "email_addr": "manoto@responder.getlantern.org",
     "body":
         [
-          ["plain", "Download at https://github.com/firetweet/downloads/blob/master/firetweet-manoto.apk?raw=true or https://s3.amazonaws.com/firetweet/firetweet-manoto.apk"],
-          ["html", "<p dir=\"rtl\">بیننده گرامی من‌وتو۱، سلام!</p><p dir=\"rtl\">از شما برای ارتباط با تیم FireTweet ممنونیم. شما می‌توانید اپلیکیشن توییتر FireTweet را از یکی از آدرس‌های زیر برای دستگاه‌های اندرویدی دانلود و نصب </p><p dir=\"rtl\">کنید:</p><p dir=\"rtl\"><a href=\"https://github.com/firetweet/downloads/blob/master/firetweet-manoto.apk?raw=true\">GitHub</a></p><p dir=\"rtl\"><a href=\"https://s3.amazonaws.com/firetweet/firetweet-manoto.apk\">S3</a></p><p dir=\"rtl\">اگر مشکل یا سوالی داشتید اون را با ایمیل Team@GetLantern.org با ما درمیان بگذارید.</p><p dir=\"rtl\">- تیم FireTweet</p>"]
+          ["plain", "بیننده گرامی من‌وتو۱، سلام!\n از شما برای ارتباط با تیم FireTweet ممنونیم. شما می‌توانید اپلیکیشن توییتر FireTweet را از یکی از آدرس‌های زیر برای دستگاه‌های اندرویدی دانلود و نصب کنید:\nhttps://github.com/firetweet/downloads/blob/master/firetweet-manoto.apk?raw=true\nhttps://s3.amazonaws.com/firetweet/firetweet-manoto.apk\nاگر مشکل یا سوالی داشتید اون را با ایمیل Team@GetLantern.org با ما درمیان بگذارید.\n - تیم FireTweet"],
+          ["html", "<div dir=\"rtl\"><p dir=\"rtl\">بیننده گرامی من‌وتو۱، سلام!</p><p dir=\"rtl\">از شما برای ارتباط با تیم FireTweet ممنونیم. شما می‌توانید اپلیکیشن توییتر FireTweet را از یکی از آدرس‌های زیر برای دستگاه‌های اندرویدی دانلود و نصب کنید:</p><p dir=\"rtl\"><a href=\"https://github.com/firetweet/downloads/blob/master/firetweet-manoto.apk?raw=true\">https://github.com/firetweet/downloads/blob/master/firetweet-manoto.apk?raw=true</a></p><p dir=\"rtl\"><a href=\"https://s3.amazonaws.com/firetweet/firetweet-manoto.apk\">https://s3.amazonaws.com/firetweet/firetweet-manoto.apk</a></p><p dir=\"rtl\">اگر مشکل یا سوالی داشتید اون را با ایمیل Team@GetLantern.org با ما درمیان بگذارید.</p><p dir=\"rtl\">- تیم FireTweet</p></div>"]
         ],
     "attachments": [["firetweet", "firetweet-manoto.apk", "firetweet-manoto.apk"]],
     "send_method": "SMTP"
