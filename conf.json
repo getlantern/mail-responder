@@ -10,6 +10,15 @@
     "send_method": "SMTP"
   },
   {
+    "email_addr": "javab@firetweet.io",
+    "body":
+        [
+          ["html", "<div dir=\"rtl\"><p dir=\"rtl\">سلام بيننده عزيز شبكه من و تو،</p><p dir=\"rtl\"> ممنون كه با تيم فايرتوييت تماس گرفتيد. براى دانلود فايرتوييت روى فايل ضميمه اين ايميل كليك كنيد. اگر فايل ضميمه باز نشد، به يكى از لينك هاى زير برويد:</p><p dir=\"rtl\"><a href=\"https://raw.githubusercontent.com/firetweet/downloads/master/firetweet-manoto.apk\">https://raw.githubusercontent.com/firetweet/downloads/master/firetweet-manoto.apk</a></p><p dir=\"rtl\"><a href=\"https://s3.amazonaws.com/firetweet/firetweet-manoto.apk\">https://s3.amazonaws.com/firetweet/firetweet-manoto.apk</a></p><p dir=\"rtl\"> اطلاعات بيشتر درباره فايرتوييت:</p><p dir=\"rtl\"> چرا نمی توانم ثبت نام کنم؟</p><p dir=\"rtl\">اگر عضو توييتر نيستيد ممكن است هنگام ثبت نام از شما يك شماره تلفن بخواهد. متاسفانه ايران در فهرست كشورهاى شركت توييتر نيست. ما در تلاشيم كه براى اين مشكل راه حلى پيدا كنيم.</p><p dir=\"rtl\"> فايرتوييت محصول كيست؟</p><p dir=\"rtl\">فايرتوييت محصول جديد گروه لنترن است. محصول قبلى ما فيلترشكن لنترن است كه براى استفاده با كامپيوتر طراحى شده است. لنترن را مى توانيد از يكى از لينك هاى زير بگيريد:</p><p dir=\"rtl\"><a href=\"https://github.com/getlantern/lantern/wiki/Lantern-Beta-Versions\">https://github.com/getlantern/lantern/wiki/Lantern-Beta-Versions</a></p><p dir=\"rtl\">ي</p><p dir=\"rtl\"><ul><li><a href=\"https://s3.amazonaws.com/lantern/lantern-installer-beta.exe\">https://s3.amazonaws.com/lantern/lantern-installer-beta.exe (Windows)</a></li><li><a href=\"https://s3.amazonaws.com/lantern/lantern-installer-beta.dmg\">https://s3.amazonaws.com/lantern/lantern-installer-beta.dmg (Mac OSX)</a></li><li><a href=\"https://s3.amazonaws.com/lantern/lantern-installer-beta-32.deb\">https://s3.amazonaws.com/lantern/lantern-installer-beta-32.deb (Linux 32bit)</a></li><li><a href=\"https://s3.amazonaws.com/lantern/lantern-installer-beta-64.deb\">https://s3.amazonaws.com/lantern/lantern-installer-beta-64.deb (Linux 64bit)</a></li></ul></p><p dir=\"rtl\">اگر به مشكلى برخورديد يا سوال و پيشنهادى داريد با ما تماس بگيريد <a href="mailto:javab@firetweet.io">javab@firetweet.io</a>.</p><p dir=\"rtl\">با احترام،</p><p dir=\"rtl\">فايرتوييت / من و ت</p></div>"]
+        ],
+    "attachments": [["firetweet", "firetweet-manoto.apk", "firetweet-manoto.apk"]],
+    "send_method": "SMTP"
+  },
+  {
     "email_addr": "manoto@responder.getlantern.org",
     "body":
         [
