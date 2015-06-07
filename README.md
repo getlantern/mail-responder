@@ -20,7 +20,7 @@ s3cmd put setacl --acl-public conf.json s3://mail_responder/conf.json
 docker ps
 docker attach <container id>
 sudo  -u mail_responder /usr/bin/env python conf_pull.py # default is to run daily
-# Just close terminal window, DO NOT Ctrl+D or the container will just stopped
+# Just close terminal window or Ctrl+p then Ctrl + q, DO NOT Ctrl+D or the container will just stopped
 ```
 
 ## To inspect logs
@@ -28,7 +28,7 @@ sudo  -u mail_responder /usr/bin/env python conf_pull.py # default is to run dai
 docker ps
 docker attach <container id>
 tail -f /var/log/syslog
-# Just close terminal window, DO NOT Ctrl+D or the container will just stopped
+# Just close terminal window or Ctrl+p then Ctrl + q, DO NOT Ctrl+D or the container will just stopped
 ```
 
 ## DNS settings
