@@ -1,0 +1,45 @@
+سلام بيننده عزيز شبكه من و تو،
+
+ممنون كه با تيم فايرتوييت تماس گرفتيد. براى دانلود فايرتوييت روى فايل ضميمه اين ايميل كليك كنيد. اگر فايل ضميمه باز نشد، به يكى از دو لينك زير برويد:
+
+https://raw.githubusercontent.com/firetweet/downloads/master/firetweet-manoto.apk
+
+يا
+
+https://s3.amazonaws.com/firetweet/firetweet-manoto.apk
+
+اطلاعات بيشتر درباره فايرتوييت:
+
+چرا نمی توانم ثبت نام کنم؟
+
+اگر عضو توييتر نيستيد ممكن است هنگام ثبت نام از شما يك شماره تلفن بخواهد. متاسفانه ايران در فهرست كشورهاى شركت توييتر نيست. ما در تلاشيم براى اين مشكل راه حلى پيدا كنيم.
+
+فايرتوييت محصول كيست؟
+
+فايرتوييت محصول جديد گروه لنترن است. محصول قبلى ما فيلترشكن لنترن براى كامپيوتر است. لنترن را مى توانيد از لينك هاى زير بگيريد:
+
+https://github.com/getlantern/lantern/wiki/Lantern-Beta-Versions
+
+لنترن براى ويندوز:
+
+https://s3.amazonaws.com/lantern/lantern-installer-beta.exe
+
+لنترن براى مك:
+
+https://s3.amazonaws.com/lantern/lantern-installer-beta.dmg
+
+لنترن براى لينوكس ٣٢ بيت:
+
+https://s3.amazonaws.com/lantern/lantern-installer-beta-32.deb
+
+لنترن براى لينوكس ٦٤ بيت:
+
+https://s3.amazonaws.com/lantern/lantern-installer-beta-64.deb
+
+اگر مشكل يا سوال و پيشنهادى داريد به ما ايميل بزنيد:
+
+javab@getlantern.org
+
+با احترام،
+
+فايرتوييت / من و تو
