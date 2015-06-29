@@ -1,5 +1,3 @@
 cat docker/boto.cfg.tmpl | envsubst > docker/boto.cfg
-if [ ! -z docker/dkim.key ]; then
-    cp ../too-many-secrets/mail-responder/dkim.key docker/dkim.key
-fi
+[ -f docker/dkim.key ] || cp ../too-many-secrets/mail-responder/dkim.key docker/dkim.key
 docker build -t mail-responder docker/
