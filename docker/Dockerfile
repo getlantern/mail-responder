@@ -37,5 +37,5 @@ RUN (cd psiphon-circumvention-system/EmailResponder && sh ./install.sh)
 COPY rsyslog.conf /etc/rsyslog.conf
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 # RUN touch /var/log/mail_responder.log
-EXPOSE 22 25
+EXPOSE 25
 CMD ["/usr/bin/supervisord"]
