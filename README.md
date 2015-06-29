@@ -7,7 +7,7 @@ A Docker image builder and config to deploy a [Psiphon email auto responder](htt
 export AWS_ACCESS_KEY_ID=<key>
 export AWS_SECRET_ACCESS_KEY=<secret>
 ./make.sh
-docker run --restart=always -dtip 25:25 mail-responder
+docker run --restart=always -dtip 25:25 --name=mail-responder mail-responder
 ```
 
 ## To update response mail address and content
@@ -17,18 +17,14 @@ s3cmd put setacl --acl-public conf.json s3://mail_responder/conf.json
 
 ### If you want it to take effect immediately, login to the server running docker image and update config manually.
 ```
-docker ps
-docker attach <container id>
-sudo  -u mail_responder /usr/bin/env python conf_pull.py # default is to run daily
-# Just close terminal window or Ctrl+p then Ctrl + q, DO NOT Ctrl+D or the container will just stopped
+docker exec -ti mail-responder /bin/bash
+> sudo -u mail_responder /usr/bin/env python ~mail_responder/conf_pull.py # default is to run daily
 ```
 
 ## To inspect logs
 ```
-docker ps
-docker attach <container id>
-tail -f /var/log/syslog
-# Just close terminal window or Ctrl+p then Ctrl + q, DO NOT Ctrl+D or the container will just stopped
+docker exec -ti mail-responder /bin/bash
+> tail -f /var/log/syslog
 ```
 
 ## DNS settings

@@ -1,7 +1,6 @@
 FROM ubuntu:trusty
 
-RUN apt-get update
-RUN apt-get install -y openssh-server ntp fail2ban postfix logwatch build-essential mercurial python-pip mysql-server python-mysqldb python-sqlalchemy
+RUN apt-get -y update && apt-get install -y openssh-server ntp fail2ban postfix logwatch build-essential mercurial python-pip mysql-server python-mysqldb python-sqlalchemy supervisor
 RUN pip install --upgrade python-dateutil python-crontab boto dnspython
 RUN pip install --allow-external pydkim --allow-unverified pydkim pydkim
 
@@ -17,6 +16,7 @@ RUN useradd -s /usr/sbin/nologin forwarder && mkdir /home/forwarder && chown for
 RUN useradd ubuntu # as normal user on this host, required by postfix
 RUN echo postmaster: ubuntu root: ubuntu support: forwarder@localhost > /etc/aliases && newaliases
 RUN mkdir -p /etc/ssl/private && chmod 710 /etc/ssl/private && openssl dhparam -out /etc/ssl/private/dhparams.pem 2048 && chmod 600 /etc/ssl/private/dhparams.pem
+RUN mkdir -p /var/run/sshd
 
 RUN wget -O postfix-logwatch-1.40.03.tgz "http://downloads.sourceforge.net/project/logreporters/postfix-logwatch/release/1.40.03/postfix-logwatch-1.40.03.tgz?r=http%3A%2F%2Fsourceforge.net%2Fprojects%2Flogreporters%2Ffiles%2Fpostfix-logwatch%2Frelease%2F1.40.03%2F&ts=1433163910&use_mirror=softlayer-ams"
 RUN tar -xvf postfix-logwatch-1.40.03.tgz
@@ -35,8 +35,7 @@ COPY settings.py psiphon-circumvention-system/EmailResponder/settings.py
 RUN (cd psiphon-circumvention-system/EmailResponder && sh ./install.sh)
 
 COPY rsyslog.conf /etc/rsyslog.conf
-RUN touch /var/log/mail_responder.log
-COPY run.sh /
-EXPOSE 25
-#ENTRYPOINT ["tail", "-f", "/var/log/mail_responder.log"]
-ENTRYPOINT ["/run.sh"]
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+# RUN touch /var/log/mail_responder.log
+EXPOSE 22 25
+CMD ["/usr/bin/supervisord"]
