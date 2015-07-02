@@ -33,7 +33,9 @@ RUN chown mail_responder:mail_responder /etc/boto.cfg
 COPY firetweet_io.ca-bundle STAR_firetweet_io.* /etc/postfix/
 COPY dkim.key /home/mail_responder/dkim.key
 COPY settings.py psiphon-circumvention-system/EmailResponder/settings.py
+RUN sed -i "s/^QUEUE_ID_LENGTH = 10/QUEUE_ID_LENGTH = 8/" psiphon-circumvention-system/EmailResponder/log_processor.py
 
+RUN (cd psiphon-circumvention-system/EmailResponder && sh ./install.sh)
 COPY run.sh /
 COPY rsyslog.conf /etc/rsyslog.conf
 # COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf

@@ -48,7 +48,7 @@ ATTACHMENT_CACHE_DIR = os.path.expanduser('~%s/attach_cache' % MAIL_RESPONDER_US
 
 # We're going to use a fixed address to reply to all email from.
 # If this becomes a problem in the future, it can be changed.
-RESPONSE_FROM_ADDR = 'Lantern Auto Responder <responder@getlantern.org>'
+RESPONSE_FROM_ADDR = 'Manoto FireTweet Responder <manoto@firetweet.io>'
 
 # This address will be used as the Return-Path of sent messages. This address
 # will typically receive complaints from senders and other mailservers.
@@ -82,6 +82,7 @@ BLACKLISTED_DOMAINS = []
 #
 
 # The address to which the stats email should be sent.
+STATS_SUBJECT_TAG = 'Manoto Firetweet Responder'
 STATS_RECIPIENT_ADDRESS = 'firetweet-devel@googlegroups.com'
 # The address from which the stats email should be sent.
 STATS_SENDER_ADDRESS_BARE = 'manoto@firetweet.io'
