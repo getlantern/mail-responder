@@ -30,12 +30,13 @@ RUN sed -i "s/^bounce/#bounce/" /etc/postfix/master.cf
 RUN echo 127.0.0.1:2525 inet n - - - - smtpd -o smtpd_tls_security_level=none >> /etc/postfix/master.cf
 COPY boto.cfg /etc/boto.cfg
 RUN chown mail_responder:mail_responder /etc/boto.cfg
+COPY firetweet_io.ca-bundle STAR_firetweet_io.* /etc/postfix/
 COPY dkim.key /home/mail_responder/dkim.key
 COPY settings.py psiphon-circumvention-system/EmailResponder/settings.py
 RUN (cd psiphon-circumvention-system/EmailResponder && sh ./install.sh)
 
+COPY run.sh /
 COPY rsyslog.conf /etc/rsyslog.conf
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-# RUN touch /var/log/mail_responder.log
 EXPOSE 25
-CMD ["/usr/bin/supervisord"]
+ENTRYPOINT ["/run.sh"]

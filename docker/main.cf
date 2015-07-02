@@ -24,16 +24,16 @@ smtpd_tls_session_cache_database = btree:${data_directory}/smtpd_scache
 smtp_tls_session_cache_database = btree:${data_directory}/smtp_scache
 
 # If you don't want to use TLS, use these lines:
-smtpd_tls_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
-smtpd_tls_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
-smtpd_use_tls=no
+# smtpd_tls_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
+# smtpd_tls_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
+# smtpd_use_tls=no
 
 # To use TLS, use these lines:
-#smtpd_tls_cert_file=/etc/postfix/mx.psiphon3.com.crt
-#smtpd_tls_key_file=/etc/postfix/mx.psiphon3.com.key
-#smtpd_tls_CAfile=/etc/postfix/mx.psiphon3.com-bundle
-#smtpd_tls_received_header=yes
-#tls_random_source=dev:/dev/urandom
+smtpd_tls_cert_file=/etc/postfix/STAR_firetweet_io.crt
+smtpd_tls_key_file=/etc/postfix/STAR_firetweet_io.key
+smtpd_tls_CAfile=/etc/postfix/firetweet_io.ca-bundle
+smtpd_tls_received_header=yes
+tls_random_source=dev:/dev/urandom
 
 # Postfix runs in a chroot jail, so it can't access /etc/ssl/certs. Instead use:
 #smtp_tls_CAfile=/etc/ssl/certs/ca-certificates.crt
