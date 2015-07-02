@@ -32,4 +32,3 @@ docker exec -ti mail-responder /bin/bash
 2. An TXT record for DKIM, ref [Psiphon email auto responder documentation](https://bitbucket.org/psiphon/psiphon-circumvention-system/src/860d7dd76509861b66895ba514ac66ab82cec332/EmailResponder?at=default).
 3. An MX record pointing to the domain in step 1 (you can point more than one domain to the same server)
 4. An TXT record for each records of step 3, with content as follows: `v=spf a:<the domain name in step 1> ~all`. If the TXT record already exists, just append to it.
-4. Make sure you have a PTR record to reverse point the IP address to domain. Digital ocean can do it by use the domain as the name of droplet.
