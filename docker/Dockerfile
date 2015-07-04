@@ -4,8 +4,7 @@ RUN apt-get -y update && apt-get install -y openssh-server ntp fail2ban postfix 
 RUN pip install --upgrade python-dateutil python-crontab boto dnspython
 RUN pip install --allow-external pydkim --allow-unverified pydkim pydkim
 
-RUN hg clone https://bitbucket.org/psiphon/psiphon-circumvention-system
-
+#RUN hg clone https://bitbucket.org/psiphon/psiphon-circumvention-system
 #RUN /etc/ssh/sshd_config
 #RUN /etc/fail2ban/jail.local
 #RUN /etc/fail2ban/filter.d/sshd.conf
@@ -32,10 +31,9 @@ COPY boto.cfg /etc/boto.cfg
 RUN chown mail_responder:mail_responder /etc/boto.cfg
 COPY firetweet_io.ca-bundle STAR_firetweet_io.* /etc/postfix/
 COPY dkim.key /home/mail_responder/dkim.key
-COPY settings.py psiphon-circumvention-system/EmailResponder/settings.py
-RUN sed -i "s/^QUEUE_ID_LENGTH = 10/QUEUE_ID_LENGTH = 8/" psiphon-circumvention-system/EmailResponder/log_processor.py
-
-RUN (cd psiphon-circumvention-system/EmailResponder && sh ./install.sh)
+ADD /EmailResponder /EmailResponder
+COPY settings.py /EmailResponder/settings.py
+RUN (cd /EmailResponder && sh ./install.sh)
 COPY run.sh /
 COPY rsyslog.conf /etc/rsyslog.conf
 # COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
