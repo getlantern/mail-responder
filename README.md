@@ -32,3 +32,7 @@ docker exec -ti mail-responder /bin/bash
 2. An TXT record for DKIM, ref [Psiphon email auto responder documentation](https://bitbucket.org/psiphon/psiphon-circumvention-system/src/860d7dd76509861b66895ba514ac66ab82cec332/EmailResponder?at=default).
 3. An MX record pointing to the domain in step 1 (you can point more than one domain to the same server)
 4. An TXT record for each records of step 3, with content as follows: `v=spf a:<the domain name in step 1> ~all`. If the TXT record already exists, just append to it.
+
+## To load testing
+
+Refer part 2 of [this article](http://www.tothenew.com/blog/load-testing-an-smtp-application-using-jmeter-postal/) to create SMTP Samplers using as many mail addresses as possible (Gmail, Yahoo, Outlook, etc), set the "Address To" to the address of auto responder, and properly set thread count and interval to prevent mail provider from drop the requests.
