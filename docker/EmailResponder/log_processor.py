@@ -78,7 +78,7 @@ class LogHandlers(object):
     FAILURE = 0
     NO_RECORD_MATCH = 0
 
-    queue_id_matcher = '[0-9A-F]{8,%s}' % (QUEUE_ID_LENGTH,)
+    queue_id_matcher = '[0-9A-F]{4,%s}' % (QUEUE_ID_LENGTH,)
 
     def __init__(self):
 
