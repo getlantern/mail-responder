@@ -31,6 +31,7 @@ COPY boto.cfg /etc/boto.cfg
 RUN chown mail_responder:mail_responder /etc/boto.cfg
 COPY firetweet_io.ca-bundle STAR_firetweet_io.* /etc/postfix/
 COPY dkim.key /home/mail_responder/dkim.key
+ADD /Automation /Automation
 ADD /EmailResponder /EmailResponder
 COPY settings.py /EmailResponder/settings.py
 RUN (cd /EmailResponder && sh ./install.sh)
