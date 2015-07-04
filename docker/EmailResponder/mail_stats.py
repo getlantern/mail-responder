@@ -350,10 +350,10 @@ if __name__ == '__main__':
     email_body += '\n\n'
     email_body += get_exception_info()
     email_body += '\n\n'
-    email_body += 'SES quota info\n----------------------\n' + get_ses_quota()
-    email_body += '\n\n'
-    email_body += 'Instance info\n----------------------\n' + get_instance_info()
-    email_body += '\n\n'
+    #email_body += 'SES quota info\n----------------------\n' + get_ses_quota()
+    #email_body += '\n\n'
+    #email_body += 'Instance info\n----------------------\n' + get_instance_info()
+    #email_body += '\n\n'
     email_body += 'Logwatch Basic\n----------------------\n' + logwatch_basic
 
     email_body += '</pre>'

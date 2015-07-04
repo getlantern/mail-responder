@@ -2,3 +2,4 @@ docker/boto.cfg
 docker/*.key
 docker/*.crt
 docker/*bundle
+data
