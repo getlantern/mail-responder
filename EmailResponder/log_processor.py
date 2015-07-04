@@ -30,7 +30,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 Base = declarative_base()
 
-QUEUE_ID_LENGTH = 8
+QUEUE_ID_LENGTH = 12
 
 
 def now_milliseconds():
@@ -78,7 +78,7 @@ class LogHandlers(object):
     FAILURE = 0
     NO_RECORD_MATCH = 0
 
-    queue_id_matcher = '[0-9A-F]{%s}' % (QUEUE_ID_LENGTH,)
+    queue_id_matcher = '[0-9A-F]{8,%s}' % (QUEUE_ID_LENGTH,)
 
     def __init__(self):
 
