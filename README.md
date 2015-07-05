@@ -7,7 +7,7 @@ A Docker image builder and config to deploy a [Psiphon email auto responder](htt
 export AWS_ACCESS_KEY_ID=<key>
 export AWS_SECRET_ACCESS_KEY=<secret>
 ./make.sh
-docker run --restart=always -dtip 25:25 -v `pwd`/data:/data --name=mail-responder mail-responder
+./restart.sh
 ```
 
 ## To update response mail address and content

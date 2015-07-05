@@ -32,6 +32,7 @@ import shlex
 import textwrap
 import datetime
 import httplib
+import socket
 from boto.ses.connection import SESConnection
 from boto.ec2.cloudwatch import CloudWatchConnection
 
@@ -334,14 +335,8 @@ if __name__ == '__main__':
 
     email_body = '<pre>\n'
 
-    email_body += 'Cluster-wide stats\n\n'
-    email_body += cloudwatch_info
+    email_body += 'Stats for ' + socket.gethostname() + '\n\n'
 
-    email_body += '\n======================\n\n'
-
-    email_body += 'Instance-specific stats'
-
-    email_body += '\n\n'
     email_body += loginfo
 
     email_body += 'Postfix queue counts\n----------------------\n' + queue_check
@@ -350,10 +345,6 @@ if __name__ == '__main__':
     email_body += '\n\n'
     email_body += get_exception_info()
     email_body += '\n\n'
-    #email_body += 'SES quota info\n----------------------\n' + get_ses_quota()
-    #email_body += '\n\n'
-    #email_body += 'Instance info\n----------------------\n' + get_instance_info()
-    #email_body += '\n\n'
     email_body += 'Logwatch Basic\n----------------------\n' + logwatch_basic
 
     email_body += '</pre>'
