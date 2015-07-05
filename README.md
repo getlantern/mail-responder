@@ -28,11 +28,13 @@ docker exec -ti mail-responder /bin/bash
 ```
 
 ## DNS settings
-1. An A record pointing to the server running docker image
-2. An TXT record for DKIM, ref [Psiphon email auto responder documentation](https://bitbucket.org/psiphon/psiphon-circumvention-system/src/860d7dd76509861b66895ba514ac66ab82cec332/EmailResponder?at=default).
-3. An MX record pointing to the domain in step 1 (you can point more than one domain to the same server)
-4. An TXT record for each records of step 3, with content as follows: `v=spf a:<the domain name in step 1> ~all`. If the TXT record already exists, just append to it.
+1. An A record pointing to the server running docker image, you can point to more servers for DNS round robin.
+2. A TXT record for DKIM, ref [Psiphon email auto responder documentation](https://bitbucket.org/psiphon/psiphon-circumvention-system/src/860d7dd76509861b66895ba514ac66ab82cec332/EmailResponder?at=default).
+3. A MX record pointing to the domain in step 1.
+4. A TXT record for the MX record of step 3, with content as follows: `v=spf a:<the domain name in step 1> ~all`. If the TXT record already exists, just append to it.
 
-## To load testing
+## Load testing
 
 Refer part 2 of [this article](http://www.tothenew.com/blog/load-testing-an-smtp-application-using-jmeter-postal/) to create SMTP Samplers using as many mail addresses as possible (Gmail, Yahoo, Outlook, etc), set the "Address To" to the address of auto responder, and properly set thread count and interval to prevent mail provider from drop the requests.
+
+It requires 3-5 seconds to process one mail on a $5 DO instance, which means 720+ mail per hour for one server.
