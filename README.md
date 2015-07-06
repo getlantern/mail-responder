@@ -15,7 +15,7 @@ export AWS_SECRET_ACCESS_KEY=<secret>
 s3cmd put setacl --acl-public conf.json s3://mail_responder/conf.json
 ```
 
-### If you want it to take effect immediately, login to the server running docker image and update config manually.
+### If you want it to take effect immediately, login to each server running docker image and update config manually.
 ```
 docker exec -ti mail-responder /bin/bash
 > sudo -u mail_responder /usr/bin/env python ~mail_responder/conf_pull.py # default is to run daily
@@ -24,7 +24,10 @@ docker exec -ti mail-responder /bin/bash
 ## To inspect logs
 ```
 docker exec -ti mail-responder /bin/bash
-> tail -f /var/log/syslog
+> tail -f /var/log/mail-responder.log
+> mysql responder
+> select *, from_unixtime(created/1000) from incoming_mail order by created;
+> select *, from_unixtime(created/1000) from outgoing_mail order by created;
 ```
 
 ## DNS settings

@@ -5,4 +5,5 @@ mysql -uroot -e "CREATE DATABASE IF NOT EXISTS responder; GRANT ALL ON responder
 service rsyslog start
 service postfix start
 # (cd psiphon-circumvention-system/EmailResponder && sh ./install.sh)
+/bin/bash -c "cron -f" > /var/log/cron.log 2>&1 &
 /bin/bash
