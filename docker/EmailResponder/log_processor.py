@@ -40,6 +40,7 @@ class IncomingMail(Base):
     __tablename__ = 'incoming_mail'
     queue_id = Column(String(QUEUE_ID_LENGTH), primary_key=True)
     created = Column(BIGINT, default=now_milliseconds)
+    addr = Column(String(256))
     mailserver2 = Column(String(256))
     mailserver3 = Column(String(256))
     processing_start = Column(BIGINT)
@@ -55,6 +56,7 @@ class OutgoingMail(Base):
     size = Column(Integer)
     sent = Column(BIGINT)
     expired = Column(BIGINT)
+    addr = Column(String(256))
     mailserver2 = Column(String(256))
     mailserver3 = Column(String(256))
 
@@ -424,6 +426,7 @@ class LogHandlers(object):
             mail = dbsession.query(IncomingMail).filter_by(queue_id=msgdict['queue_id']).first()
             if not mail: return self.NO_RECORD_MATCH
             mail.size = msgdict['size']
+            mail.addr = msgdict['addr']
             mail.processing_start = now_milliseconds()
 
         return self.SUCCESS
@@ -471,7 +474,7 @@ class LogHandlers(object):
         '''
         Response successfully sent. Record the end time.
         '''
-        m = re.match('^(?P<queue_id>'+self.queue_id_matcher+'): to=<[^@]+@(?P<mail_domain>[^>]+)>.*',
+        m = re.match('^(?P<queue_id>'+self.queue_id_matcher+'): to=<(?P<mail_user>[^@]+)@(?P<mail_domain>[^>]+)>.*',
                      logdict['message'])
         if not m: return self.FAILURE
         msgdict = m.groupdict()
@@ -481,6 +484,7 @@ class LogHandlers(object):
         mail.sent = now_milliseconds()
 
         # Keep the last two and last three parts of the mail server domain separately
+        mail.addr = msgdict['mail_user'] + '@' + msgdict['mail_domain']
         mailserver2 = '.'.join(msgdict['mail_domain'].split('.')[-2:])[:OutgoingMail.mailserver2.property.columns[0].type.length]
         mailserver3 = '.'.join(msgdict['mail_domain'].split('.')[-3:])[:OutgoingMail.mailserver3.property.columns[0].type.length]
         mail.mailserver2 = mailserver2
