@@ -122,8 +122,6 @@ smtpd_recipient_restrictions =
    reject_non_fqdn_recipient,
    reject_unknown_sender_domain,
    reject_unauth_destination,
-   reject_rbl_client zen.spamhaus.org,
-   reject_rbl_client bl.spamcop.net,
    permit
 
 # Without this, some of the above reject lines can be bypassed.
