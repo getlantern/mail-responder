@@ -27,8 +27,15 @@ docker exec -ti mail-responder /bin/bash
 docker exec -ti mail-responder /bin/bash
 > tail -f /var/log/mail-responder.log
 > mysql responder
-> select *, from_unixtime(created/1000) from incoming_mail order by created;
-> select *, from_unixtime(created/1000) from outgoing_mail order by created;
+```
+
+### A few SQL may helpful
+
+```
+# mail process time in last day
+select addr, from_unixtime(processing_start/1000), from_unixtime(processing_end/1000), (processing_end-processing_start)/1000 from incoming_mail where created > UNIX_TIMESTAMP(DATE_SUB(NOW(), INTERVAL 1 day))*1000 order by created;
+# mail defered to send and the reason
+select addr, from_unixtime(created/1000), defer_count, defer_last_reason from outgoing_mail where created > UNIX_TIMESTAMP(DATE_SUB(NOW(), INTERVAL 1 day))*1000 order by created;
 ```
 
 ## DNS settings
