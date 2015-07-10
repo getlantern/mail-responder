@@ -4,6 +4,7 @@ A Docker image builder and config to deploy a [Psiphon email auto responder](htt
 
 ## To build and run docker image
 ```
+wget -qO- https://get.docker.com/ | sh
 export AWS_ACCESS_KEY_ID=<key>
 export AWS_SECRET_ACCESS_KEY=<secret>
 ./make.sh
